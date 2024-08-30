@@ -1,5 +1,5 @@
 {
-    "name": "backpack/basset",
+    "name": "hncore/basset",
     "description": "Dead-simple way to load CSS or JS assets only once per page, when using Laravel 10+.",
     "license": "MIT",
     "authors": [
