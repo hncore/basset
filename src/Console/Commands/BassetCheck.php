@@ -71,12 +71,12 @@ class BassetCheck extends Command
             $this->line('  <fg=gray>│ This may be due to multiple issues. Please ensure:</>');
             $this->line('  <fg=gray>│  1) APP_URL is correctly set in the <fg=white>.env</> file.</>');
             $this->line('  <fg=gray>│  2) Your server is running and accessible at <fg=white>'.url('').'</>.</>');
-            $this->line('  <fg=gray>│  3) The <fg=white>'.config('backpack.basset.disk').'</> disk is properly configured in <fg=white>config/filesystems.php</>.</>');
+            $this->line('  <fg=gray>│  3) The <fg=white>'.config('hncore.basset.disk').'</> disk is properly configured in <fg=white>config/filesystems.php</>.</>');
             $this->line('  <fg=gray>│     Optionally, basset provides a disk named "basset", you can use it instead.</>');
             $this->line('  <fg=gray>│  4) The storage symlink exists and is valid (by default: public/storage).</>');
             $this->line('  <fg=gray>│</>');
             $this->line('  <fg=gray>│ For more information and solutions, please visit the Backpack Basset FAQ at:</>');
-            $this->line('  <fg=gray>│ <fg=white>https://github.com/laravel-backpack/basset#faq</></>');
+            $this->line('  <fg=gray>│ <fg=white>https://github.com/laravel-hncore/basset#faq</></>');
             $this->newLine();
             exit(1);
         }
@@ -96,7 +96,7 @@ class BassetCheck extends Command
         $this->basset = app('basset');
 
         // set a local file to run the tests
-        $this->filepath = base_path('vendor/backpack/basset/tests/Helpers/basset-test.js');
+        $this->filepath = base_path('vendor/hncore/basset/tests/Helpers/basset-test.js');
 
         if (! File::exists($this->filepath)) {
             throw new Exception('Error accessing the filesystem, the check can not run.');

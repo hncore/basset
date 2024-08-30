@@ -36,11 +36,11 @@ class BassetManager
         $this->loaded = [];
 
         /** @var FilesystemAdapter */
-        $disk = Storage::disk(config('backpack.basset.disk'));
+        $disk = Storage::disk(config('hncore.basset.disk'));
 
         $this->disk = $disk;
-        $this->basePath = (string) Str::of(config('backpack.basset.path'))->finish('/');
-        $this->dev = config('backpack.basset.dev_mode', false);
+        $this->basePath = (string) Str::of(config('hncore.basset.path'))->finish('/');
+        $this->dev = config('hncore.basset.dev_mode', false);
 
         $this->cacheMap = new CacheMap($this->disk, $this->basePath);
         $this->loader = new LoadingTime();
@@ -460,7 +460,7 @@ class BassetManager
      */
     public function fetchContent(string $url): string
     {
-        return Http::withOptions(['verify' => config('backpack.basset.verify_ssl_certificate', true)])
+        return Http::withOptions(['verify' => config('hncore.basset.verify_ssl_certificate', true)])
             ->get($url)
             ->body();
     }

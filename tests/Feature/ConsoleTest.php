@@ -1,7 +1,7 @@
 <?php
 
 it('clears basset folder via console command', function () {
-    $path = config('backpack.basset.path');
+    $path = config('hncore.basset.path');
 
     // pollute with a sample file
     disk()->put("$path/sample.js", 'sample');

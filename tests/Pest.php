@@ -33,8 +33,8 @@ uses(BaseTest::class)
 
         // setup config
         config([
-            'backpack.basset.disk' => 'basset',
-            'backpack.basset.path', 'basset',
+            'hncore.basset.disk' => 'basset',
+            'hncore.basset.path', 'basset',
         ]);
     })
     ->in(__DIR__);

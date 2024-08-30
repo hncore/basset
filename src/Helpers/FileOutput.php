@@ -18,9 +18,9 @@ class FileOutput
 
     public function __construct()
     {
-        $this->nonce = config('backpack.basset.nonce', null);
+        $this->nonce = config('hncore.basset.nonce', null);
         $this->cachebusting = '?'.substr(md5(base_path('composer.lock')), 0, 12);
-        $this->useRelativePaths = config('backpack.basset.relative_paths', true);
+        $this->useRelativePaths = config('hncore.basset.relative_paths', true);
 
         // load all templates
         $templates = File::allFiles(realpath(__DIR__.'/../resources/views'));

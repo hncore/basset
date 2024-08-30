@@ -17,7 +17,7 @@ class CacheMap
 
     public function __construct(FilesystemAdapter $disk, string $basePath)
     {
-        $this->isActive = config('backpack.basset.cache_map', false);
+        $this->isActive = config('hncore.basset.cache_map', false);
         if (! $this->isActive) {
             return;
         }

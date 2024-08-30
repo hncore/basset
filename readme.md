@@ -29,7 +29,7 @@ No more publishing package files. No more using NPM just to download some files.
 ## Installation
 
 ```bash
-composer require backpack/basset
+composer require hncore/basset
 php artisan basset:install
 ```
 
@@ -170,7 +170,7 @@ If you require customized behavior after each asset is cached, you can set up a 
 
 ## Configuration
 
-Take a look at [the config file](https://github.com/Laravel-Backpack/basset/blob/main/src/config/backpack/basset.php) for all configuration options. Notice some of those configs also have ENV variables, so you can:
+Take a look at [the config file](https://github.com/Laravel-Backpack/basset/blob/main/src/config/hncore/basset.php) for all configuration options. Notice some of those configs also have ENV variables, so you can:
 - enable/disable dev mode using `BASSET_DEV_MODE=false` - this will force Basset to internalize assets even on localhost
 - change the disk where assets get internalized using `BASSET_DISK=yourdiskname`
 - disable the cache map using `BASSET_CACHE_MAP=false` (needed on serverless like Laravel Vapor)
@@ -264,7 +264,7 @@ Ensure that APP_URL in your `.env` matches your server configuration, including 
 2) **Improperly configured disk.**  
 By default, Basset uses the Laravel `public` disk. 
 For new Laravel projects, the configuration is usually correct. 
-If you're upgrading a project and/or changed the `public` disk configuration, it's advised that you change the basset disk in `config/backpack/basset.php` to `basset`. The `basset` disk is a copy of the original Laravel `public` with working configurations.
+If you're upgrading a project and/or changed the `public` disk configuration, it's advised that you change the basset disk in `config/hncore/basset.php` to `basset`. The `basset` disk is a copy of the original Laravel `public` with working configurations.
 
 3) **Missing or broken storage symlink.**  
 If you use the default `public` disk, Basset requires that the symlink between the storage and the public accessible folder to be created with `php artisan storage:link` command. During installation, Basset attempts to create the symlink. If it fails, you will need to manually create it with `php artisan storage:link`. If you encounter issues (e.g., after moving the project), recreating the symlink should resolve them.
@@ -287,7 +287,7 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 ## Security
 
-If you discover any security related issues, please email hello@backpackforlaravel.com instead of using the issue tracker.
+If you discover any security related issues, please email hello@hncoreforlaravel.com instead of using the issue tracker.
 
 ## Credits
 
@@ -299,14 +299,14 @@ If you discover any security related issues, please email hello@backpackforlarav
 
 MIT. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/backpack/basset.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/backpack/basset.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/backpack/basset/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/hncore/basset.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/hncore/basset.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/hncore/basset/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/421785142/shield
 
-[link-packagist]: https://packagist.org/packages/backpack/basset
-[link-downloads]: https://packagist.org/packages/backpack/basset
-[link-travis]: https://travis-ci.org/backpack/basset
+[link-packagist]: https://packagist.org/packages/hncore/basset
+[link-downloads]: https://packagist.org/packages/hncore/basset
+[link-travis]: https://travis-ci.org/hncore/basset
 [link-styleci]: https://styleci.io/repos/421785142
 [link-author]: https://github.com/Laravel-Backpack
 [link-contributors]: ../../contributors

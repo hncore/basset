@@ -13,7 +13,7 @@ trait ViewPathsTrait
      */
     private static function initViewPaths(): void
     {
-        self::$viewPaths = config('backpack.basset.view_paths', []);
+        self::$viewPaths = config('hncore.basset.view_paths', []);
     }
 
     /**

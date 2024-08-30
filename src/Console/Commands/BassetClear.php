@@ -36,8 +36,8 @@ class BassetClear extends Command
     public function handle(): void
     {
         /** @var FilesystemAdapter */
-        $disk = Storage::disk(config('backpack.basset.disk'));
-        $path = config('backpack.basset.path');
+        $disk = Storage::disk(config('hncore.basset.disk'));
+        $path = config('hncore.basset.path');
         $pathRelative = Str::of($disk->path($path))->replace(base_path(), '')->replace('\\', '/');
 
         $this->line("Clearing basset '$pathRelative'");

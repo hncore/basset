@@ -52,7 +52,7 @@ class BassetServiceProvider extends ServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__.'/config/backpack/basset.php' => config_path('backpack/basset.php'),
+            __DIR__.'/config/hncore/basset.php' => config_path('hncore/basset.php'),
         ], 'config');
 
         // Registering package commands.
@@ -72,7 +72,7 @@ class BassetServiceProvider extends ServiceProvider
         $this->app->scoped('basset', fn () => new BassetManager());
 
         // Merge the configuration file.
-        $this->mergeConfigFrom(__DIR__.'/config/backpack/basset.php', 'backpack.basset');
+        $this->mergeConfigFrom(__DIR__.'/config/hncore/basset.php', 'hncore.basset');
 
         // Register blade directives
         $this->registerBladeDirectives();
@@ -154,7 +154,7 @@ class BassetServiceProvider extends ServiceProvider
         $basset = app('basset');
 
         // Log execution time
-        if (config('backpack.basset.log_execution_time', false)) {
+        if (config('hncore.basset.log_execution_time', false)) {
             $totalCalls = $basset->loader->getTotalCalls();
             $loadingTime = $basset->loader->getLoadingTime();
 
@@ -178,7 +178,7 @@ class BassetServiceProvider extends ServiceProvider
         }
 
         // if the basset disk isn't being used at all, don't even bother to add it
-        if (app()->config['backpack.basset.disk'] !== 'basset') {
+        if (app()->config['hncore.basset.disk'] !== 'basset') {
             return;
         }
 

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 
 it('ignores cdn basset on dev mode', function ($asset) {
     // set dev mode
-    config(['backpack.basset.dev_mode' => true]);
+    config(['hncore.basset.dev_mode' => true]);
 
     $result = bassetInstance($asset, false);
     $path = bassetInstance()->getPath($asset);
@@ -21,7 +21,7 @@ it('ignores cdn basset on dev mode', function ($asset) {
 
 it('re-internalizes local basset on dev mode', function ($asset) {
     // set dev mode
-    config(['backpack.basset.dev_mode' => true]);
+    config(['hncore.basset.dev_mode' => true]);
 
     // create the stub resource in disk
     disk()->put($asset, getStub($asset));
@@ -39,7 +39,7 @@ it('re-internalizes local basset on dev mode', function ($asset) {
 
 it('ignores basset block on dev mode', function ($asset) {
     // set dev mode
-    config(['backpack.basset.dev_mode' => true]);
+    config(['hncore.basset.dev_mode' => true]);
 
     $codeBlock = getStub($asset);
 

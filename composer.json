@@ -9,7 +9,7 @@
             "homepage": "https://tabacitu.ro"
         }
     ],
-    "homepage": "https://github.com/laravel-backpack/basset",
+    "homepage": "https://github.com/laravel-hncore/basset",
     "keywords": ["Laravel", "Basset", "Assets", "Load CSS once", "Load JS once"],
     "scripts": {
         "test": "./vendor/bin/pest",
